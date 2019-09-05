@@ -1,3 +1,3 @@
 # hooks-test
 
-WIPs Commit
+Commit
