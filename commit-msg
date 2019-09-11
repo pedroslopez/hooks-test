@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+MSG_FILE=$1
+MESSAGE=`head -n1 $MSG_FILE`
+ISSUE_PATTERN="^(ISSUE)-[[:digit:]]+ : "
+if ! [[ "$MESSAGE" =~ $ISSUE_PATTERN ]]; then
+  echo "Mensaje de commit incorrecto. Debe estar en formato ISSUE-123 : commit message"
+  exit 1
+fi
